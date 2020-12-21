@@ -2,7 +2,7 @@
 
 VisualNE plugin to select multiple nodes at once.
 
-![Capture](./capture.gif?raw=true)
+![Capture](installation/capture.gif?raw=true)
 
 ## Usage
 

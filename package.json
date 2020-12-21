@@ -41,9 +41,5 @@
     "tslib": "^2.0.3",
     "typescript": "^3.9.7",
     "visualne": "^1.1.0"
-  },
-  "files": [
-    "dist/*",
-    "src/*"
-  ]
+  }
 }
