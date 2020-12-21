@@ -1,0 +1,49 @@
+{
+  "name": "visualne-selection-plugin",
+  "version": "1.0.0",
+  "description": "VisualNE plugin to select multiple nodes at once.",
+  "main": "dist/visualne-selection-plugin.common.js",
+  "module": "dist/visualne-selection-plugin.esm.js",
+  "types": "types/index.d.ts",
+  "scripts": {
+    "build": "npx rollup -c && npx rollup -c rollup.minify.config.js",
+    "prebuild": "npm run lint && npm run types",
+    "prepublishOnly": "npm run build",
+    "publish": "npm publish --access=public",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --fix --ext .ts",
+    "types": "tsc src/index.ts --target es5 --declaration --outDir ./types --downlevelIteration --emitDeclarationOnly"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vamidi/visualne-selection-plugin.git"
+  },
+  "author": "Valencio Hoffman",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.12.7",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.12.1",
+    "@babel/plugin-proposal-optional-chaining": "^7.12.7",
+    "@babel/preset-env": "^7.12.7",
+    "@babel/preset-typescript": "^7.12.7",
+    "@typescript-eslint/eslint-plugin": "^4.7.0",
+    "@typescript-eslint/parser": "^4.7.0",
+    "eslint": "^7.16.0",
+    "rollup": "^2.33.2",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-eslint": "^7.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-sourcemaps": "^0.6.3",
+    "rollup-plugin-terser": "^7.0.2",
+    "ts-node": "^9.0.0",
+    "tslib": "^2.0.3",
+    "typescript": "^3.9.7",
+    "visualne": "^1.1.0"
+  },
+  "files": [
+    "build/*",
+    "src/*"
+  ]
+}
