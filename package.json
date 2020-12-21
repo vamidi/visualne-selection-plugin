@@ -1,6 +1,6 @@
 {
   "name": "visualne-selection-plugin",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "VisualNE plugin to select multiple nodes at once.",
   "main": "dist/visualne-selection-plugin.common.js",
   "module": "dist/visualne-selection-plugin.esm.js",
