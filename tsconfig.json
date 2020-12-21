@@ -19,7 +19,7 @@
       "node_modules/tslib/tslib.d.ts"
     ],
     "typeRoots": [
-      "node_modules/@types"
+      "types/index.d.ts"
     ],
     "lib": [
       "es2018",
