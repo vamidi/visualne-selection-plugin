@@ -11,16 +11,17 @@ const bundle = 'visualne-selection-plugin'
 module.exports = {
     // mode: 'development',
     input: 'src/index.ts',
-    external: ['visualne'],
-    globals: {
-        'visualne': 'VisualNE',
-    },
+    external: [
+        'visualne',
+    ],
     output: [
         {
             name: 'VisualNE',
-            sourceMap: true,
             file: `dist/${bundle}.min.js`,
             format: 'umd',
+            globals: {
+                'visualne': 'visualne',
+            }
         },
     ],
     plugins: [

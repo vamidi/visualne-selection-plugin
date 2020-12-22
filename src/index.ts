@@ -1,7 +1,6 @@
-import { EPointerButton } from 'visualne/types/view/drag';
 import { EventsTypes } from 'visualne/types/events';
 import { PluginParams } from 'visualne/types/core/plugin';
-import { Context, NodeEditor, Plugin } from 'visualne';
+import { Context, EPointerButton, NodeEditor, Plugin } from 'visualne';
 import { Position, Size, applyTransform, cleanSelectionArea, drawSelectionArea } from './utils';
 
 export interface SelectionParams extends PluginParams {

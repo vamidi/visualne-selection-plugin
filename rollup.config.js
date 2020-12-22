@@ -4,25 +4,32 @@ import sourcemaps from 'rollup-plugin-sourcemaps';
 import { eslint } from 'rollup-plugin-eslint';
 
 const extensions = ['.js', '.jsx', '.ts', '.tsx'];
-const bundle = 'visualne-selection-plugin'
+const bundle = 'visualne-selection-plugin';
+const globals = {
+    'visualne': 'visualne',
+};
 
 module.exports = {
     // mode: 'development',
     input: 'src/index.ts',
-    external: ['visualne'],
-    globals: {
-        'visualne': 'VisualNE',
-    },
+    external: [
+        'visualne',
+        'visualne/types/view',
+    ],
     output: [
         {
-            sourceMap: true,
+            name: 'VisualNE',
             file: `dist/${bundle}.common.js`,
             format: 'cjs',
+            exports: 'named',
+            globals,
         },
         {
-            sourceMap: true,
+            name: 'VisualNE',
             file: `dist/${bundle}.esm.js`,
             format: 'esm',
+            exports: 'named',
+            globals,
         }
     ],
     plugins: [
